@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">MTA NEWS</string>
+    <string name="utilizator">Utilizator</string>
+    <string name="parola">Parola</string>
+    <string name="autentificare">AUTENTIFICARE</string>
+    <string name="log_in">LOG IN</string>
+    <string name="creare_cont">Creare cont</string>
+    <string name="creare_contt">CREARE CONT</string>
+    <string name="nume">Nume</string>
+    <string name="email">Email</string>
+    <string name="sing_up">SING UP</string>
+    <string name="ai_deja_cont">Ai deja cont?</string>
+    <string name="prenume">Prenume</string>
+    <string name="auten">Ai deja un cont?     <u>AUTENTIFICARE!</u></string>
+    <string name="creeaza">Utilizator nou?     <u>CREEAZA UN CONT!</u></string>
+    <string name="todo">TODO</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="prioritate">admin</string>
+    <string name="search">Search</string>
+    <string name="batalion">Batalion</string>
+    <string name="facultate">Facultate</string>
+    <string name="dropdown">DropDown</string>
+    <string-array name="batalion">
+        <item>I Studenti</item>
+        <item>II Studenti</item>
+        <item>III Studenti</item>
+        <item>IV Studenti</item>
+    </string-array>
+    <string-array name="facultate">
+        <item>Facultatea de Aeronave si Autovehicule Militare</item>
+        <item>Facultatea de Sisteme Integrate de Armament, Geniu si Mecatronica</item>
+        <item>Facultatea de Sisteme Informatice si Securitate Cibernetica</item>
+        <item>Facultatea de Comunicatii si Sisteme Electronice pentru Aparare si Securitate</item>
+    </string-array>
+</resources>

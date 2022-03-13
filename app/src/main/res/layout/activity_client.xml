@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Client">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/main"
+        android:gravity="center"
+        app:titleTextColor="@color/main"
+        tools:ignore="MissingConstraints,NewApi"
+        tools:targetApi="jelly_bean">
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@color/main"
+            android:foregroundGravity="left"
+            android:padding="0dp"
+            android:src="@drawable/fundal"
+            tools:ignore="ContentDescription" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/toolbar2"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:background="@color/main"
+        tools:targetApi="jelly_bean"
+        tools:ignore="MissingConstraints,NewApi">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:rowCount="1">
+
+            <GridLayout
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4.5dp"
+                android:background="@drawable/style_completare"
+                android:columnCount="2"
+                android:rowCount="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText"
+                    android:layout_width="240dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/style_completare"
+                    android:hint="@string/search"
+                    android:textSize="15dp"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp"
+                    android:textColorHint="@color/umbra" />
+
+                <Button
+                    android:id="@+id/Searchbtn"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:background="@drawable/style_completare"
+                    android:drawableEnd="@drawable/ic_search"
+                    android:paddingEnd="7dp" />
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/contbtn"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_toEndOf="@+id/Searchbtn"
+                android:background="@drawable/style_button"
+                android:drawableRight="@drawable/ic_user"
+                android:gravity="center"
+                android:layout_marginTop="4.5dp"
+                android:layout_marginBottom="4.5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="2dp" />
+
+            <Button
+                android:id="@+id/meniubtn"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_toEndOf="@+id/Searchbtnbtn"
+                android:background="@drawable/style_button"
+                android:drawableRight="@drawable/ic_meniu"
+                android:gravity="center"
+                android:layout_marginTop="4.5dp"
+                android:layout_marginBottom="4.5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="2dp"
+                android:paddingRight="2dp" />
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/meniu"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:tabTextColor="@color/umbra"
+        app:tabSelectedTextColor="@color/main"
+        app:tabIndicatorColor="@color/main"
+        app:tabIndicatorHeight="3.5dp"
+        app:tabMode="scrollable"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Batalion"
+            android:id="@+id/batalion">
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facultate"
+            android:id="@+id/facultate">
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interes general"
+            android:id="@+id/interesgeneral">
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AS_ATM"
+            android:id="@+id/asatm">
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cabinet medical"
+            android:id="@+id/cabinetmedical">
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sport"
+            android:id="@+id/sport">
+        </com.google.android.material.tabs.TabItem>
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="583dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meniu"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
