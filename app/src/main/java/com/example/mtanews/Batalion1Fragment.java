@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 
 public class Batalion1Fragment extends Fragment {
 
-    @Nullable
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_batalion1, null);
         return v;
     }

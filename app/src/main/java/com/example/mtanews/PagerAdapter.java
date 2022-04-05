@@ -1,22 +1,47 @@
 package com.example.mtanews;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-public class PagerAdapter extends FragmentPagerAdapter {
 
-    int tabcount;
+public class PagerAdapter extends FragmentStateAdapter {
 
-    public PagerAdapter(@NonNull FragmentManager fm, int behavior) {
-        super(fm, behavior);
-        tabcount = behavior;
+    private final String[] valori= new String[]{"Batalion", "Facultate", "Interes General", "AS_ATM", "Cabinet Medical", "Sport"};
+
+    /*String batalion, facultate;
+
+
+    public String getBatalion() {
+        batalion=Client.batalion;
+        Log.d("mesaj", batalion);
+        return batalion;
+    }
+
+    public String getFacultate() {
+        facultate=Client.facultate;
+        return facultate;
+    }
+
+    public void setBatalion(String batalion) {
+        this.batalion = batalion;
+        Log.d("mesaj", batalion);
+    }
+
+    public void setFacultate(String facultate) {
+        this.facultate = facultate;
+    }*/
+
+    public PagerAdapter(FragmentActivity fragmentActivity) {
+        super(fragmentActivity);
     }
 
     @NonNull
     @Override
-    public Fragment getItem(int position) {
+    public Fragment createFragment(int position) {
         switch (position)
         {
             case 0:
@@ -38,7 +63,8 @@ public class PagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public int getCount() {
-        return tabcount;
+    public int getItemCount() {
+        return valori.length;
     }
 }
+

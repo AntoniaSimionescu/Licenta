@@ -26,8 +26,8 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
     TextView textViewAutentificare;
     ProgressBar progressBar;
     Spinner spinner, spinner1;
-    public String batalion;
-    public String facultate;
+    public static String batalion;
+    public static String facultate;
 
     private String getBatalionLetter(String batalion){
         String toBeReturned="";
@@ -67,6 +67,8 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
         spinner1.setAdapter(adapter2);
 
 
+
+
         textInputEditTextNume = findViewById(R.id.nume);
         textInputEditTextPrenume = findViewById(R.id.prenume);
         textInputEditTextEmail = findViewById(R.id.email);
@@ -92,6 +94,7 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
             parola = String.valueOf(textInputEditTextParola.getText());
             batalion = spinner.getSelectedItem().toString();
             facultate = spinner1.getSelectedItem().toString();
+
             if(!nume.equals("") && !prenume.equals("") && !email.equals("") && !utilizator.equals("") && !parola.equals("") && !batalion.equals("") && !facultate.equals("")) {
 
                 progressBar.setVisibility(View.VISIBLE);
@@ -113,6 +116,7 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
                     data[4] = parola;
                     data[5] = getBatalionLetter(batalion);
                     data[6] = getFacultateLetter(facultate);
+
                     PutData putData = new PutData("http://10.10.19.129/LoginRegister/signup.php", "POST", field, data);
                     if (putData.startPut()) {
                         if (putData.onComplete()) {

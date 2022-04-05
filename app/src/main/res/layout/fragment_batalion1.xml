@@ -12,6 +12,7 @@
         android:fitsSystemWindows="true"
         android:padding="2dp">
 
+
     </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

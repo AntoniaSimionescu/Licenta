@@ -21,6 +21,7 @@
     <string name="batalion">Batalion</string>
     <string name="facultate">Facultate</string>
     <string name="dropdown">DropDown</string>
+    <string name="batalion1">Batalion1</string>
     <string-array name="batalion">
         <item>I Studenti</item>
         <item>II Studenti</item>
