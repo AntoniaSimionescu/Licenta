@@ -22,6 +22,14 @@
     <string name="facultate">Facultate</string>
     <string name="dropdown">DropDown</string>
     <string name="batalion1">Batalion1</string>
+    <string name="profil">Profil</string>
+    <string name="model_raport">Model raport</string>
+    <string name="setari">Setari</string>
+    <string name="conctact">Conctact</string>
+    <string name="deconectare">Deconectare</string>
+    <string name="share">Share</string>
+    <string name="navigation_draw_open">open navigation drawer</string>
+    <string name="navigation_draw_close">close navigation drawer</string>
     <string-array name="batalion">
         <item>I Studenti</item>
         <item>II Studenti</item>

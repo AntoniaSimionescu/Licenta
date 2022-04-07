@@ -82,7 +82,6 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
                     android:drawableLeft="@drawable/ic_user"
@@ -95,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="2"
-                    android:layout_marginTop="-10dp"
+                    android:layout_marginTop="-3dp"
                     android:layout_column="0"
                     android:layout_marginLeft="23dp"
                     android:textColor="@color/umbra"
@@ -104,7 +103,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium"
                     android:layout_marginTop="3dp"
                     android:drawableLeft="@drawable/ic_nume"
                     android:text="PRENUME:"
@@ -117,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_row="4"
                     android:layout_column="0"
-                    android:layout_marginTop="-10dp"
+                    android:layout_marginTop="-3dp"
                     android:layout_marginLeft="23dp"
                     android:textColor="@color/umbra"
                     android:textSize="17dp" />
@@ -126,7 +124,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:fontFamily="@font/poppinsmedium"
                     android:drawableLeft="@drawable/ic_email"
                     android:text="EMAIL:"
                     android:textColor="@color/black"
@@ -137,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_row="6"
-                    android:layout_marginTop="-10dp"
+                    android:layout_marginTop="-3dp"
                     android:layout_column="0"
                     android:layout_marginLeft="23dp"
                     android:textColor="@color/umbra"
@@ -148,7 +145,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:drawableLeft="@drawable/ic_batalion"
-                    android:fontFamily="@font/poppinsmedium"
                     android:text="BATALION:"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
@@ -159,7 +155,7 @@
                     android:layout_height="wrap_content"
                     android:layout_row="8"
                     android:layout_column="0"
-                    android:layout_marginTop="-10dp"
+                    android:layout_marginTop="-3dp"
                     android:layout_marginLeft="23dp"
                     android:textColor="@color/umbra"
                     android:textSize="17dp" />
@@ -170,7 +166,6 @@
                     android:layout_marginTop="3dp"
                     android:drawableLeft="@drawable/ic_facultate"
                     android:text="FACULTATE:"
-                    android:fontFamily="@font/poppinsmedium"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
@@ -181,7 +176,7 @@
                     android:layout_row="10"
                     android:layout_column="0"
                     android:layout_marginLeft="23dp"
-                    android:layout_marginTop="-10dp"
+                    android:layout_marginTop="-3dp"
                     android:textColor="@color/umbra"
                     android:textSize="17dp" />
                 <ImageView

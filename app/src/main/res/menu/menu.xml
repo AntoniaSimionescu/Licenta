@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/profil"
+            android:title="@string/profil"
+            android:icon="@drawable/ic_user">
+        </item>
+        <item android:id="@+id/model_raport"
+            android:title="@string/model_raport"
+            android:icon="@drawable/ic_raport">
+        </item>
+        <item android:id="@+id/setari"
+            android:title="@string/setari"
+            android:icon="@drawable/ic_setari">
+        </item>
+        <item android:id="@+id/contact"
+            android:title="@string/conctact"
+            android:icon="@drawable/ic_contact">
+        </item>
+    </group>
+    <item android:title="Altele">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/share"
+                    android:title="@string/share"
+                    android:icon="@drawable/ic_share">
+                </item>
+                <item android:id="@+id/deconectare"
+                    android:title="@string/deconectare"
+                    android:icon="@drawable/ic_logout">
+                </item>
+            </group>
+        </menu>
+
+    </item>
+
+</menu>
