@@ -14,6 +14,7 @@ import java.io.*;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mtanews.core.UserData;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
@@ -29,8 +30,8 @@ public class Autentificare extends AppCompatActivity {
     Button buttonLogin;
     TextView textViewCrearecont;
     ProgressBar progressBar;
-    public static String resultt;
-    public static String batalion, facultate, nume, email, prenume, utilizator;
+    public static String prioritate;
+    public static String batalion, facultate, nume, email, prenume;
 
 
 
@@ -71,7 +72,7 @@ public class Autentificare extends AppCompatActivity {
                         String[] data = new String[2];
                         data[0] = utilizator;
                         data[1] = parola;
-                        PutData putData = new PutData("http://10.10.19.129/LoginRegister/login.php", "POST", field, data);
+                        PutData putData = new PutData("http://192.168.0.12/LoginRegister/login.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 progressBar.setVisibility(View.GONE);
@@ -101,30 +102,30 @@ public class Autentificare extends AppCompatActivity {
                                             break;
                                         } else {
                                             Log.d("Fetchx", key + "===" + object.get(key));
-                                            resultt = object.get("prioritate").toString();
+                                            prioritate = object.get("prioritate").toString();
 
                                         }
                                     }
                                     batalion = object.get("batalion").toString();
-                                    Log.d("bat",batalion);
                                     facultate = object.get("facultate").toString();
-                                    Log.d("bat",facultate);
                                     nume = object.get("nume").toString();
-                                    Log.d("bat",nume);
                                     email = object.get("email").toString();
-                                    Log.d("bat",email);
                                     prenume = object.get("prenume").toString();
-                                    Log.d("bat",prenume);
 
+                                    UserData.GetInstance().setNume(nume);
+                                    UserData.GetInstance().setPrenume(prenume);
+                                    UserData.GetInstance().setEmail(email);
+                                    UserData.GetInstance().setBatalion(batalion);
+                                    UserData.GetInstance().setFacultate(facultate);
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
 
 
-                                if (resultt.equals("admin") || resultt.equals("client")) {
+                                if (prioritate.equals("admin") ||prioritate.equals("client")) {
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                    intent.putExtra("prioritate", resultt);
+                                    intent.putExtra("prioritate", prioritate);
                                     startActivity(intent);
                                     finish();
                                 } else {

@@ -1,10 +1,13 @@
-package com.example.mtanews;
+package com.example.mtanews.client;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.mtanews.Autentificare;
+import com.example.mtanews.R;
 
 public class Cont extends AppCompatActivity {
 

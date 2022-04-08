@@ -117,7 +117,7 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
                     data[5] = getBatalionLetter(batalion);
                     data[6] = getFacultateLetter(facultate);
 
-                    PutData putData = new PutData("http://10.10.19.129/LoginRegister/signup.php", "POST", field, data);
+                    PutData putData = new PutData("http://192.168.0.12/LoginRegister/signup.php", "POST", field, data);
                     if (putData.startPut()) {
                         if (putData.onComplete()) {
                             progressBar.setVisibility(View.GONE);

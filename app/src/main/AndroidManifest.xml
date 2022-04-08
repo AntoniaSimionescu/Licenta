@@ -16,14 +16,17 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".Cont"
+            android:name=".client.Contact"
+            android:exported="false" />
+        <activity
+            android:name=".client.Cont"
             android:exported="false" />
         <activity
             android:name=".Admin"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Client"
+            android:name=".client.Client"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -54,7 +57,7 @@
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".PagerAdapter"
+            android:name=".client.PagerAdapter"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             tools:ignore="Instantiatable" />

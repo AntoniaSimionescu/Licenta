@@ -1,4 +1,4 @@
-package com.example.mtanews;
+package com.example.mtanews.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,12 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class CabinetMedicalFragment extends Fragment {
+import com.example.mtanews.R;
+
+public class FacultateBFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_cabinet_medical, null);
+        View v = inflater.inflate(R.layout.fragment_facultate_b, null);
         return v;
     }
 }

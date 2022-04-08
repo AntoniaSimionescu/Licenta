@@ -1,9 +1,8 @@
-package com.example.mtanews;
+package com.example.mtanews.client;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Button;
 
@@ -12,10 +11,12 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
-import android.widget.LinearLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.mtanews.Autentificare;
+import com.example.mtanews.R;
+import com.example.mtanews.core.UserData;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -78,6 +79,7 @@ public class Client extends AppCompatActivity implements NavigationView.OnNaviga
         });
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -86,6 +88,16 @@ public class Client extends AppCompatActivity implements NavigationView.OnNaviga
                 Intent intent = new Intent(this, Cont.class);
                 startActivity(intent);
                 break;
+            case R.id.contact:
+                Intent intent2 = new Intent(this, Contact.class);
+                startActivity(intent2);
+                break;
+            case R.id.deconectare:
+                UserData.DisconnectInstance();
+                Intent intent3 = new Intent(this, Autentificare.class);
+                startActivity(intent3);
+                break;
+
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
