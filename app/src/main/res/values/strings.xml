@@ -42,4 +42,9 @@
         <item>Facultatea de Sisteme Informatice si Securitate Cibernetica</item>
         <item>Facultatea de Comunicatii si Sisteme Electronice pentru Aparare si Securitate</item>
     </string-array>
+    <string name="link_mail"><a href="mailto:relat&#105;&#105;.p&#117;&#98;l&#105;c&#101;&#64;m&#116;&#97;.&#114;&#111;">relatii.publice@mta.ro</a></string>
+    <string name="phone1"><a href="tel: (+40) 21 335 46 65"> (+40) 21 335 46 65</a></string>
+    <string name="phone2"><a href="tel: (+40) 21 335 46 69"> (+40) 21 335 46 69</a></string>
+    <string name="phone3"><a href="tel: (+40) 21 335 46 68"> (+40) 21 335 46 68</a></string>
+    <string name="locatie"><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.729776102951!2d26.084214751384824!3d44.41819051054109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff0b54881f97%3A0xae84d2f47f65a3a7!2sAcademia%20Tehnic%C4%83%20Militar%C4%83%20Ferdinand%20I!5e0!3m2!1sro!2sro!4v1567766994086!5m2!1sro!2sro"> </a></string>
 </resources>

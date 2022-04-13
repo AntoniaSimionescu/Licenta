@@ -8,22 +8,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mtanews.Autentificare;
 import com.example.mtanews.R;
+import com.example.mtanews.core.UserData;
 
 public class Cont extends AppCompatActivity {
 
     public String batalion, facultate, email, nume, prenume, numeprenume;
     TextView nume_txt, email_txt, email_txt2, prenume_txt, numeprenume_txt, batalion_txt, facultate_txt;
+
     @SuppressLint({"CutPasteId", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cont);
 
-        batalion = Autentificare.batalion;
-        facultate = Autentificare.facultate;
-        email = Autentificare.email;
-        nume = Autentificare.nume;
-        prenume = Autentificare.prenume;
+
+        batalion = UserData.GetInstance().getBatalion();
+        facultate = UserData.GetInstance().getFacultate();
+        email = UserData.GetInstance().getEmail();
+        nume = UserData.GetInstance().getNume();
+        prenume = UserData.GetInstance().getPrenume();
 
         numeprenume_txt = findViewById(R.id.numeprenume_cont);
         email_txt = findViewById(R.id.email_cont);

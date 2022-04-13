@@ -103,54 +103,53 @@
 
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/meniu"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/meniu"
+        android:backgroundTint="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        app:tabTextColor="@color/umbra"
-        app:tabSelectedTextColor="@color/main"
         app:tabIndicatorColor="@color/main"
         app:tabIndicatorHeight="3.5dp"
         app:tabMode="scrollable"
-        android:layout_marginTop="0dp"
-        android:backgroundTint="@color/white">
+        app:tabSelectedTextColor="@color/main"
+        app:tabTextColor="@color/umbra"
+        tools:layout_editor_absoluteX="-87dp">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/batalion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Batalion"
-            android:id="@+id/batalion">
-        </com.google.android.material.tabs.TabItem>
+            android:text="Batalion"></com.google.android.material.tabs.TabItem>
+
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/facultate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Facultate"
-            android:id="@+id/facultate">
-        </com.google.android.material.tabs.TabItem>
+            android:text="Facultate"></com.google.android.material.tabs.TabItem>
+
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/interesgeneral"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Interes general"
-            android:id="@+id/interesgeneral">
-        </com.google.android.material.tabs.TabItem>
+            android:text="Interes general"></com.google.android.material.tabs.TabItem>
+
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/asatm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AS_ATM"
-            android:id="@+id/asatm">
-        </com.google.android.material.tabs.TabItem>
+            android:text="AS_ATM"></com.google.android.material.tabs.TabItem>
+
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/cabinetmedical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cabinet medical"
-            android:id="@+id/cabinetmedical">
-        </com.google.android.material.tabs.TabItem>
+            android:text="Cabinet medical"></com.google.android.material.tabs.TabItem>
+
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/sport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sport"
-            android:id="@+id/sport">
-        </com.google.android.material.tabs.TabItem>
+            android:text="Sport"></com.google.android.material.tabs.TabItem>
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2

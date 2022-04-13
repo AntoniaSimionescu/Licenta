@@ -7,6 +7,7 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mtanews.admin.Admin;
 import com.example.mtanews.client.Client;
 
 public class MainActivity extends AppCompatActivity {

@@ -38,8 +38,10 @@
         android:layout_marginTop="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contact_toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/contact_toolbar"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,21 +51,108 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CONTACT"
-                android:textSize="25dp"
                 android:layout_marginLeft="15dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="CONTACT"
                 android:textColor="@color/black"
-                android:fontFamily="@font/poppinsmedium"/>
+                android:textSize="25dp" />
 
             <TextView
-                android:layout_width="193dp"
+                android:layout_width="210dp"
                 android:layout_height="45dp"
                 android:layout_marginLeft="15dp"
                 android:drawableLeft="@drawable/ic_academie"
-                android:paddingLeft="5dp"
-                android:text="ACADEMIA TEHNICĂ
-                MILITARĂ „FERDINAND I”"
+                android:paddingLeft="0dp"
+                android:text="ACADEMIA TEHNICĂ MILITARĂ „FERDINAND I”"
                 android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/ic_locatie"
+                android:paddingLeft="0dp"
+                android:text="Bulevardul George Coșbuc, nr. 39-49, Sector 5, BUCUREȘTI, Cod poștal 050141"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/phone1"
+                android:layout_width="210dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="25dp"
+                android:text="@string/phone1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/phone2"
+                android:layout_width="210dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/ic_telefon"
+                android:paddingLeft="0dp"
+                android:text="@string/phone2"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/phone3"
+                android:layout_width="210dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="25dp"
+                android:text="@string/phone3"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/ic_fax"
+                android:paddingLeft="0dp"
+                android:text=" (+40) 21 335 70 60"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/link_mail"
+                android:layout_width="210dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/ic_mail"
+                android:paddingLeft="0dp"
+                android:text="@string/link_mail"
+                android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="LOCAȚIE"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/sigla" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="FACEBOOK"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"
+                    android:textSize="25dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/sigla" />
+
         </LinearLayout>
 
     </ScrollView>
