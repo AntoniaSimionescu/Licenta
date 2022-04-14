@@ -9,6 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,9 +27,11 @@ public class Admin extends AppCompatActivity implements NavigationView.OnNavigat
     public String nume, prenume, numeprenume;
     TextView numeprenume_txt;
     Button batalion1, batalion2, batalion3, batalion4, facultateA, facultateB, facultateC, facultateE, interesgeneral, asatm, cabinetmedical, sport;
+    public static String idbatalion;
 
     private DrawerLayout drawerLayout;
     Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,51 +67,65 @@ public class Admin extends AppCompatActivity implements NavigationView.OnNavigat
         batalion1.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) batalion1.getText();
         });
         batalion2.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) batalion2.getText();
         });
         batalion3.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) batalion3.getText();
         });
         batalion4.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) batalion4.getText();
         });
         facultateA.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) facultateA.getText();
         });
         facultateB.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) facultateB.getText();
         });
         facultateC.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) facultateC.getText();
         });
         facultateE.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) facultateE.getText();
         });
         interesgeneral.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) interesgeneral.getText();
         });
         asatm.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) asatm.getText();
         });
         cabinetmedical.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) cabinetmedical.getText();
         });
         sport.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
+            idbatalion = (String) sport.getText();
         });
+
+
 
     }
 
@@ -130,7 +147,6 @@ public class Admin extends AppCompatActivity implements NavigationView.OnNavigat
                 break;
 
         }
-
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }

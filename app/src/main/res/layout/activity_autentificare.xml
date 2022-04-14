@@ -156,7 +156,6 @@
                 android:background="@drawable/style_completare"
                 android:drawableEnd="@drawable/ic_user"
                 android:fontFamily="@font/poppinsmedium"
-
                 tools:targetApi="jelly_bean" />
 
         </com.google.android.material.textfield.TextInputLayout>

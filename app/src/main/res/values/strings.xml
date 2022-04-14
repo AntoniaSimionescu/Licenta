@@ -31,16 +31,16 @@
     <string name="navigation_draw_open">open navigation drawer</string>
     <string name="navigation_draw_close">close navigation drawer</string>
     <string-array name="batalion">
-        <item>I Studenti</item>
-        <item>II Studenti</item>
-        <item>III Studenti</item>
-        <item>IV Studenti</item>
+        <item>I Studenți</item>
+        <item>II Studenți</item>
+        <item>III Studenți</item>
+        <item>IV Studenți</item>
     </string-array>
     <string-array name="facultate">
-        <item>Facultatea de Aeronave si Autovehicule Militare</item>
-        <item>Facultatea de Sisteme Integrate de Armament, Geniu si Mecatronica</item>
-        <item>Facultatea de Sisteme Informatice si Securitate Cibernetica</item>
-        <item>Facultatea de Comunicatii si Sisteme Electronice pentru Aparare si Securitate</item>
+        <item>Facultatea de Aeronave și Autovehicule Militare</item>
+        <item>Facultatea de Sisteme Integrate de Armament, Geniu și Mecatronică</item>
+        <item>Facultatea de Sisteme Informatice și Securitate Cibernetică</item>
+        <item>Facultatea de Comunicații și Sisteme Electronice pentru Aparare și Securitate</item>
     </string-array>
     <string name="link_mail"><a href="mailto:relat&#105;&#105;.p&#117;&#98;l&#105;c&#101;&#64;m&#116;&#97;.&#114;&#111;">relatii.publice@mta.ro</a></string>
     <string name="phone1"><a href="tel: (+40) 21 335 46 65"> (+40) 21 335 46 65</a></string>
