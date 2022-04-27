@@ -97,6 +97,10 @@ public class Client extends AppCompatActivity implements NavigationView.OnNaviga
                 Intent intent3 = new Intent(this, Autentificare.class);
                 startActivity(intent3);
                 break;
+            case R.id.model_raport:
+                Intent intent4 = new Intent(this, Raport.class);
+                startActivity(intent4);
+                break;
 
         }
 

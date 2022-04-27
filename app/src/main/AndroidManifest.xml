@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.mtanews" >
+    package="com.example.mtanews">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MTANEWS"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m" >
+        tools:targetApi="m">
+        <activity
+            android:name=".client.Raport"
+            android:exported="false" />
         <activity
             android:name=".admin.RedactareStire"
             android:exported="false" />
@@ -38,7 +41,7 @@
         <activity
             android:name=".SplashScreen"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,7 +51,7 @@
         <activity
             android:name=".Autentificare"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
