@@ -88,20 +88,29 @@ public class Client extends AppCompatActivity implements NavigationView.OnNaviga
                 Intent intent = new Intent(this, Cont.class);
                 startActivity(intent);
                 break;
-            case R.id.contact:
-                Intent intent2 = new Intent(this, Contact.class);
+            case R.id.model_raport:
+                Intent intent2 = new Intent(this, Raport.class);
                 startActivity(intent2);
+                break;
+            case R.id.setari:
+                Intent intent3 = new Intent(this, Setari.class);
+                startActivity(intent3);
+                break;
+            case R.id.contact:
+                Intent intent4 = new Intent(this, Contact.class);
+                startActivity(intent4);
+                break;
+            case R.id.share:
+                Intent intent5 = new Intent(Intent.ACTION_SEND);
+                intent5.setType("text/plain");
+                intent5.putExtra(Intent.EXTRA_TEXT, "Descarcă aplicația MTA NEWS!\nLink-ul aplicației aici..." );
+                startActivity(Intent.createChooser(intent5, "Distribuie folosind: "));
                 break;
             case R.id.deconectare:
                 UserData.DisconnectInstance();
-                Intent intent3 = new Intent(this, Autentificare.class);
-                startActivity(intent3);
+                Intent intent6= new Intent(this, Autentificare.class);
+                startActivity(intent6);
                 break;
-            case R.id.model_raport:
-                Intent intent4 = new Intent(this, Raport.class);
-                startActivity(intent4);
-                break;
-
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

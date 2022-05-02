@@ -13,13 +13,14 @@ public class RedactareStire extends AppCompatActivity {
 
     String idbatalion;
     TextView idbatalion_txt;
-    Button buttonInapoi;
+    Button inapoi;
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_redactare_stire);
+
 
         idbatalion_txt = findViewById(R.id.textcategorie);
         idbatalion = Admin.idbatalion;
@@ -62,8 +63,8 @@ public class RedactareStire extends AppCompatActivity {
                 idbatalion_txt.setText("Sport");
                 break;
         }
-        buttonInapoi = findViewById(R.id.buttonInapoi);
-        buttonInapoi.setOnClickListener(v -> {
+        inapoi = findViewById(R.id.btninapoi);
+        inapoi.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), Admin.class);
             startActivity(intent);
         });

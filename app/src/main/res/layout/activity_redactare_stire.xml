@@ -29,6 +29,16 @@
             android:src="@drawable/fundal"
             tools:ignore="ContentDescription"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btninapoi"
+            android:background="@drawable/style_button"
+            android:drawableLeft="@drawable/ic_inapoi"
+            app:backgroundTint="@null"
+            android:layout_marginLeft="0dp"
+            android:padding="0dp"/>
+
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
@@ -159,20 +169,6 @@
                 android:background="@drawable/style_completare"
                 android:paddingLeft="10dp"
                 android:layout_marginTop="10dp"/>
-            <Button
-                android:id="@+id/buttonInapoi"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:background="@drawable/style_button"
-                android:layout_width="120dp"
-                android:layout_row="5"
-                android:layout_column="0"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:text="Înapoi"
-                android:textSize="18dp"
-                android:paddingLeft="12dp"
-                app:backgroundTint="@null"
-                android:layout_marginLeft="5dp" />
 
             <Button
                 android:id="@+id/buttonPostare"

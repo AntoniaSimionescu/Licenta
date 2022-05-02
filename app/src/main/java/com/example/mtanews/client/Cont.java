@@ -1,7 +1,10 @@
 package com.example.mtanews.client;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +25,7 @@ public class Cont extends AppCompatActivity {
         setContentView(R.layout.activity_cont);
 
 
+        Button inapoi = findViewById(R.id.btninapoi);
         batalion = UserData.GetInstance().getBatalion();
         facultate = UserData.GetInstance().getFacultate();
         email = UserData.GetInstance().getEmail();
@@ -43,25 +47,32 @@ public class Cont extends AppCompatActivity {
         nume_txt.setText(nume);
         prenume_txt.setText(prenume);
 
+        inapoi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Cont.this, Client.class);
+                startActivity(intent);
+            }
+        });
         switch (batalion){
             case "I":
-                batalion_txt.setText("I Studenti"); break;
+                batalion_txt.setText("Batalionul I Studenți"); break;
             case "II":
-                batalion_txt.setText("II Studenti"); break;
+                batalion_txt.setText("Batalionul II Studenți"); break;
             case "III":
-                batalion_txt.setText("III Studenti"); break;
+                batalion_txt.setText("Batalionul III Studenți"); break;
             case "IV":
-                batalion_txt.setText("IV Studenti"); break;
+                batalion_txt.setText("Batalionul IV Studenți"); break;
         }
         switch (facultate){
             case "A":
-                facultate_txt.setText("Facultatea de Aeronave si Autovehicule Militare"); break;
+                facultate_txt.setText("Facultatea de Aeronave și Autovehicule Militare"); break;
             case "B":
-                facultate_txt.setText("Facultatea de Sisteme Integrate de Armament, Geniu si Mecatronica"); break;
+                facultate_txt.setText("Facultatea de Sisteme Integrate de Armament, Geniu și Mecatronică"); break;
             case "C":
-                facultate_txt.setText("Facultatea de Sisteme Informatice si Securitate Cibernetica"); break;
+                facultate_txt.setText("Facultatea de Sisteme Informatice și Securitate Cibernetică"); break;
             case "E":
-                facultate_txt.setText("Facultatea de Comunicatii si Sisteme Electronice pentru Aparare si Securitate"); break;
+                facultate_txt.setText("Facultatea de Comunicații și Sisteme Electronice pentru Apărare și Securitate"); break;
         }
 
 

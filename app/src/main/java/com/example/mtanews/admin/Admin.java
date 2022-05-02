@@ -1,24 +1,22 @@
 package com.example.mtanews.admin;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.widget.Toolbar;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.example.mtanews.Autentificare;
 import com.example.mtanews.R;
-import com.example.mtanews.admin.Cont_Admin;
-import com.example.mtanews.client.Cont;
-import com.example.mtanews.client.Contact;
+import com.example.mtanews.client.Setari;
 import com.example.mtanews.core.UserData;
 import com.google.android.material.navigation.NavigationView;
 
@@ -129,6 +127,7 @@ public class Admin extends AppCompatActivity implements NavigationView.OnNavigat
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -136,14 +135,24 @@ public class Admin extends AppCompatActivity implements NavigationView.OnNavigat
                 Intent intent = new Intent(this, Cont_Admin.class);
                 startActivity(intent);
                 break;
-            case R.id.contact:
-                Intent intent2 = new Intent(this, Contact.class);
+            case R.id.setari:
+                Intent intent2 = new Intent(this, SetariAdmin.class);
                 startActivity(intent2);
+                break;
+            case R.id.contact:
+                Intent intent3 = new Intent(this, ContactAdmin.class);
+                startActivity(intent3);
+                break;
+            case R.id.share:
+                Intent intent4 = new Intent(Intent.ACTION_SEND);
+                intent4.setType("text/plain");
+                intent4.putExtra(Intent.EXTRA_TEXT, "Descarcă aplicația MTA NEWS!\nLink-ul aplicației aici..." );
+                startActivity(Intent.createChooser(intent4, "Distribuie folosind: "));
                 break;
             case R.id.deconectare:
                 UserData.DisconnectInstance();
-                Intent intent3 = new Intent(this, Autentificare.class);
-                startActivity(intent3);
+                Intent intent5 = new Intent(this, Autentificare.class);
+                startActivity(intent5);
                 break;
 
         }

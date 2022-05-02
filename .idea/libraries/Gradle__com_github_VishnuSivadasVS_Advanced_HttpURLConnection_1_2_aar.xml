@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0b1b898cf99df77f195f8faf4245bf6b/transformed/jetified-Advanced-HttpURLConnection-1.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0b1b898cf99df77f195f8faf4245bf6b/transformed/jetified-Advanced-HttpURLConnection-1.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0b1b898cf99df77f195f8faf4245bf6b/transformed/jetified-Advanced-HttpURLConnection-1.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/39be6b0505fd1ad4273e04c71a193e83/transformed/jetified-Advanced-HttpURLConnection-1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/39be6b0505fd1ad4273e04c71a193e83/transformed/jetified-Advanced-HttpURLConnection-1.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/39be6b0505fd1ad4273e04c71a193e83/transformed/jetified-Advanced-HttpURLConnection-1.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
