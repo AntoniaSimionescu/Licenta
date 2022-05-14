@@ -46,7 +46,11 @@ class DataBase
             $dbparola = $row['parola'];
             if ($dbutilizator == $utilizator && password_verify($parola, $dbparola)) {
                 $login = $row['prioritate'];
-            } else $login = false;
+            } else if($dbutilizator != $utilizator){
+                echo "Utilizator greșit!";
+            }else if(!password_verify($parola, $dbparola)){
+                echo "Parolă greșită!";
+            }
         } else $login = false;
 
         return $login;
@@ -68,9 +72,7 @@ class DataBase
         if (mysqli_num_rows($result) != 0) {
             $dbutilizator = $row['utilizator'];
             if ($dbutilizator == $utilizator) {
-                echo "Utilizator existent!"
-                ;
-            
+                echo "Utilizator existent!";            
             } 
         } 
         $this->sql = "select * from " . $table . " where email = '" . $email . "'";

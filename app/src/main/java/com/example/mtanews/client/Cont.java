@@ -47,12 +47,9 @@ public class Cont extends AppCompatActivity {
         nume_txt.setText(nume);
         prenume_txt.setText(prenume);
 
-        inapoi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Cont.this, Client.class);
-                startActivity(intent);
-            }
+        inapoi.setOnClickListener(v -> {
+            Intent intent = new Intent(Cont.this, Client.class);
+            startActivity(intent);
         });
         switch (batalion){
             case "I":

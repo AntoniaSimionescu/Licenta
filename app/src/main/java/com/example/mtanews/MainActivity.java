@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         String prioritate = getIntent().getStringExtra("prioritate");
-        Log.d("prioritate", prioritate);
+
         if (prioritate.equals("admin")) {
             new Handler().postDelayed(() -> {
 
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
 
                 finish();
-            }, 2000);
+            }, 3000);
         } else {
             new Handler().postDelayed(() -> {
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
 
                 finish();
-            }, 2000);
+            }, 3000);
         }
 
     }

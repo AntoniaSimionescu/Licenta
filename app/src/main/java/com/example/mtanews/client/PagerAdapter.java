@@ -22,16 +22,18 @@ import com.example.mtanews.fragment.SportFragment;
 
 public class PagerAdapter extends FragmentStateAdapter {
 
-    private final String[] valori= new String[]{"Batalion", "Facultate", "Interes General", "AS_ATM", "Cabinet Medical", "Sport"};
+   private final String[] valori= new String[]{"Batalion", "Facultate", "Interes General", "AS_ATM", "Cabinet Medical", "Sport"};
 
+    private final FragmentActivity fragmentActivity;
     public PagerAdapter(FragmentActivity fragmentActivity) {
         super(fragmentActivity);
+        this.fragmentActivity = fragmentActivity;
     }
 
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        UserData userData = UserData.GetInstance();
+
         String batalion, facultate;
         batalion = UserData.GetInstance().getBatalion();
         facultate = UserData.GetInstance().getFacultate();
@@ -40,33 +42,33 @@ public class PagerAdapter extends FragmentStateAdapter {
             case 0:
                 switch (batalion){
                     case "I":
-                        return new Batalion1Fragment();
+                        return new Batalion1Fragment(this.fragmentActivity);
                     case "II":
-                        return new Batalion2Fragment();
+                        return new Batalion2Fragment(this.fragmentActivity);
                     case "III":
-                        return new Batalion3Fragment();
+                        return new Batalion3Fragment(this.fragmentActivity);
                     case "IV":
-                        return new Batalion4Fragment();
+                        return new Batalion4Fragment(this.fragmentActivity);
                 }
             case 1:
                 switch (facultate){
                     case "A":
-                        return new FacultateAFragment();
+                        return new FacultateAFragment(this.fragmentActivity);
                     case "B":
-                        return new FacultateBFragment();
+                        return new FacultateBFragment(this.fragmentActivity);
                     case "C":
-                        return new FacultateCFragment();
+                        return new FacultateCFragment(this.fragmentActivity);
                     case "E":
-                        return new FacultateEFragment();
+                        return new FacultateEFragment(this.fragmentActivity);
                 }
             case 2:
-                return new InteresGeneralFragment();
+                return new InteresGeneralFragment(this.fragmentActivity);
             case 3:
-                return new AsAtmFragment();
+                return new AsAtmFragment(this.fragmentActivity);
             case 4:
-                return new CabinetMedicalFragment();
+                return new CabinetMedicalFragment(this.fragmentActivity);
             case 5:
-                return new SportFragment();
+                return new SportFragment(this.fragmentActivity);
 
             default:
                 return null;
@@ -74,8 +76,6 @@ public class PagerAdapter extends FragmentStateAdapter {
     }
 
     @Override
-    public int getItemCount() {
-        return valori.length;
-    }
+    public int getItemCount() {return valori.length;}
 }
 

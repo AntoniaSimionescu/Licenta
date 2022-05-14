@@ -25,7 +25,7 @@ public class Admin extends AppCompatActivity implements NavigationView.OnNavigat
     public String nume, prenume, numeprenume;
     TextView numeprenume_txt;
     Button batalion1, batalion2, batalion3, batalion4, facultateA, facultateB, facultateC, facultateE, interesgeneral, asatm, cabinetmedical, sport;
-    public static String idbatalion;
+    public static String categorie;
 
     private DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -65,66 +65,63 @@ public class Admin extends AppCompatActivity implements NavigationView.OnNavigat
         batalion1.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) batalion1.getText();
+            categorie = (String) batalion1.getText();
         });
         batalion2.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) batalion2.getText();
+            categorie = (String) batalion2.getText();
         });
         batalion3.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) batalion3.getText();
+            categorie = (String) batalion3.getText();
         });
         batalion4.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) batalion4.getText();
+            categorie = (String) batalion4.getText();
         });
         facultateA.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) facultateA.getText();
+            categorie = (String) facultateA.getText();
         });
         facultateB.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) facultateB.getText();
+            categorie = (String) facultateB.getText();
         });
         facultateC.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) facultateC.getText();
+            categorie = (String) facultateC.getText();
         });
         facultateE.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) facultateE.getText();
+            categorie = (String) facultateE.getText();
         });
         interesgeneral.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) interesgeneral.getText();
+            categorie = (String) interesgeneral.getText();
         });
         asatm.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) asatm.getText();
+            categorie = (String) asatm.getText();
         });
         cabinetmedical.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) cabinetmedical.getText();
+            categorie = (String) cabinetmedical.getText();
         });
         sport.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), RedactareStire.class);
             startActivity(intent);
-            idbatalion = (String) sport.getText();
+            categorie = (String) sport.getText();
         });
-
-
-
     }
 
     @SuppressLint("NonConstantResourceId")

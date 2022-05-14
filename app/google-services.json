@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "778713453725",
+    "project_id": "mtanews-899ff",
+    "storage_bucket": "mtanews-899ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778713453725:android:ca52be5cab6c88ce1ab074",
+        "android_client_info": {
+          "package_name": "com.example.mtanews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778713453725-de6gg229gcrlb2dgavu6ua2qs2ogpf5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwoXIP8kxD5eVf8pbR-NCcd6hNzerc91w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778713453725-de6gg229gcrlb2dgavu6ua2qs2ogpf5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

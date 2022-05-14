@@ -19,6 +19,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
+import java.util.regex.Pattern;
+
 public class Creare_cont extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     TextInputEditText textInputEditTextNume, textInputEditTextPrenume, textInputEditTextEmail, textInputEditTextUtilizator, textInputEditTextParola;
@@ -29,23 +31,24 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
     public static String batalion;
     public static String facultate;
 
-    private String getBatalionLetter(String batalion){
+
+    String getBatalionLetter(String batalion){
         String toBeReturned="";
         switch (batalion){
-            case "I Studenti":toBeReturned= "I"; break;
-            case "II Studenti":toBeReturned= "II"; break;
-            case "III Studenti":toBeReturned= "III"; break;
-            case "IV Studenti":toBeReturned= "IV";break;
+            case "I Studenți":toBeReturned= "I"; break;
+            case "II Studenți":toBeReturned= "II"; break;
+            case "III Studenți":toBeReturned= "III"; break;
+            case "IV Studenți":toBeReturned= "IV";break;
         }
         return toBeReturned;
     }
-    private String getFacultateLetter(String facultate){
+    String getFacultateLetter(String facultate){
         String toBeReturned="";
         switch (facultate){
-            case "Facultatea de Aeronave si Autovehicule Militare":toBeReturned= "A";break;
-            case "Facultatea de Sisteme Integrate de Armament, Geniu si Mecatronica":toBeReturned= "B";break;
-            case "Facultatea de Sisteme Informatice si Securitate Cibernetica":toBeReturned= "C";break;
-            case "Facultatea de Comunicatii si Sisteme Electronice pentru Aparare si Securitate":toBeReturned= "E";break;
+            case "Facultatea de Aeronave și Autovehicule Militare":toBeReturned= "A";break;
+            case "Facultatea de Sisteme Integrate de Armament, Geniu și Mecatronică":toBeReturned= "B";break;
+            case "Facultatea de Sisteme Informatice și Securitate Cibernetică":toBeReturned= "C";break;
+            case "Facultatea de Comunicații și Sisteme Electronice pentru Apărare și Securitate":toBeReturned= "E";break;
         }
         return toBeReturned;
     }
@@ -65,9 +68,6 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.facultate, R.layout.support_simple_spinner_dropdown_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter2);
-
-
-
 
         textInputEditTextNume = findViewById(R.id.nume);
         textInputEditTextPrenume = findViewById(R.id.prenume);

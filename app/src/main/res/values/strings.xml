@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MTA NEWS</string>
     <string name="utilizator">Utilizator</string>
-    <string name="parola">Parola</string>
+    <string name="parola">Parolă</string>
     <string name="autentificare">AUTENTIFICARE</string>
     <string name="log_in">LOG IN</string>
     <string name="creare_cont">Creare cont</string>
@@ -12,7 +12,7 @@
     <string name="ai_deja_cont">Ai deja cont?</string>
     <string name="prenume">Prenume</string>
     <string name="auten">Ai deja un cont?     <u>AUTENTIFICARE!</u></string>
-    <string name="creeaza">Utilizator nou?     <u>CREEAZA UN CONT!</u></string>
+    <string name="creeaza">Utilizator nou?     <u>CREEAZĂ UN CONT!</u></string>
     <string name="todo">TODO</string>
     <string name="sign_up">SIGN UP</string>
     <string name="welcome">WELCOME!</string>
@@ -24,7 +24,7 @@
     <string name="batalion1">Batalion1</string>
     <string name="profil">Profil</string>
     <string name="model_raport">Model raport</string>
-    <string name="setari">Setari</string>
+    <string name="setari">Setări</string>
     <string name="contact">Contact</string>
     <string name="deconectare">Deconectare</string>
     <string name="share">Share</string>
@@ -40,11 +40,18 @@
         <item>Facultatea de Aeronave și Autovehicule Militare</item>
         <item>Facultatea de Sisteme Integrate de Armament, Geniu și Mecatronică</item>
         <item>Facultatea de Sisteme Informatice și Securitate Cibernetică</item>
-        <item>Facultatea de Comunicații și Sisteme Electronice pentru Aparare și Securitate</item>
+        <item>Facultatea de Comunicații și Sisteme Electronice pentru Apărare și Securitate</item>
     </string-array>
     <string name="link_mail"><a href="mailto:relat&#105;&#105;.p&#117;&#98;l&#105;c&#101;&#64;m&#116;&#97;.&#114;&#111;">relatii.publice@mta.ro</a></string>
     <string name="phone1"><a href="tel: (+40) 21 335 46 65"> (+40) 21 335 46 65</a></string>
     <string name="phone2"><a href="tel: (+40) 21 335 46 69"> (+40) 21 335 46 69</a></string>
     <string name="phone3"><a href="tel: (+40) 21 335 46 68"> (+40) 21 335 46 68</a></string>
     <string name="locatie"><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.729776102951!2d26.084214751384824!3d44.41819051054109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff0b54881f97%3A0xae84d2f47f65a3a7!2sAcademia%20Tehnic%C4%83%20Militar%C4%83%20Ferdinand%20I!5e0!3m2!1sro!2sro!4v1567766994086!5m2!1sro!2sro"> </a></string>
+    <string name="autor">AUTOR</string>
+    <string name="descriere">DESCRIERE</string>
+    <string name="titlu">TITLU</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="data">DATĂ</string>
+    <string name="stire">ȘTIRE</string>
 </resources>

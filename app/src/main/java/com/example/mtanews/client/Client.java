@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.mtanews.Autentificare;
@@ -29,10 +30,11 @@ public class Client extends AppCompatActivity implements NavigationView.OnNaviga
     PagerAdapter pagerAdapter;
     Toolbar mtoolbar, toolbar;
     ViewPager2 viewPager2;
-    //public static String batalion;
-    //public String facultate;
+
     private final String[] titluri = new String[]{"Batalion", "Facultate", "Interes General", "AS_ATM", "Cabinet Medical", "Sport"};
     private DrawerLayout drawerLayout;
+
+
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +46,6 @@ public class Client extends AppCompatActivity implements NavigationView.OnNaviga
 
         setSupportActionBar(mtoolbar);
         toolbar = findViewById(R.id.toolbar);
-        /*mbatalion = findViewById(R.id.batalion);
-        mfacultate = findViewById(R.id.facultate);
-        minteresgeneral = findViewById(R.id.interesgeneral);
-        masatm = findViewById(R.id.asatm);
-        mcabinetmedical = findViewById(R.id.cabinetmedical);
-        msport = findViewById(R.id.sport);*/
-
-       /*batalion = Autentificare.batalion;
-       facultate = Autentificare.facultate;
-        Log.d("messs", batalion);
-        Log.d("messs", facultate);*/
 
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);

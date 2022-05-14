@@ -81,6 +81,9 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
                 android:rowCount="6"
                 android:columnCount="2">
 

@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.io.*;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,8 +32,6 @@ public class Autentificare extends AppCompatActivity {
     public static String prioritate;
     public static String batalion, facultate, nume, email, prenume;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,99 +49,85 @@ public class Autentificare extends AppCompatActivity {
             finish();
         });
 
-
         buttonLogin.setOnClickListener(v -> {
             String utilizator, parola;
             utilizator = String.valueOf(textInputEditTextUtilizator.getText());
             parola = String.valueOf(textInputEditTextParola.getText());
 
-
             if (!utilizator.equals("") && !parola.equals("")) {
-
                 progressBar.setVisibility(View.VISIBLE);
                 Handler handler = new Handler(Looper.getMainLooper());
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        String[] field = new String[2];
-                        field[0] = "utilizator";
-                        field[1] = "parola";
-                        String[] data = new String[2];
-                        data[0] = utilizator;
-                        data[1] = parola;
-                        PutData putData = new PutData("http://10.10.19.129/LoginRegister/login.php", "POST", field, data);
-                        if (putData.startPut()) {
-                            if (putData.onComplete()) {
-                                progressBar.setVisibility(View.GONE);
-                                String result = putData.getResult();
-                                JSONArray array = null;
-                                try {
-                                    array = new JSONArray(result);
+                handler.post(() -> {
+                    String[] field = new String[2];
+                    field[0] = "utilizator";
+                    field[1] = "parola";
+                    String[] data = new String[2];
+                    data[0] = utilizator;
+                    data[1] = parola;
+                    PutData putData = new PutData("http://10.10.19.129/LoginRegister/login.php", "POST", field, data);
+                    if (putData.startPut()) {
+                        if (putData.onComplete()) {
+                            progressBar.setVisibility(View.GONE);
+                            String result = putData.getResult();
+                            Log.d("result", result);
+                            JSONArray array = null;
+                            try {
+                                array = new JSONArray(result);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            JSONObject object = null;
 
+                            for (int i = 0; i < (array != null ? array.length() : 0); i++) {
+                                try {
+                                    object = array.getJSONObject(i);
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
-                                JSONObject object = null;
+                            }
+                            try {
 
-                                for (int i = 0; i < (array != null ? array.length() : 0); i++) {
-                                    try {
-                                        object = array.getJSONObject(i);
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
+                                assert object != null;
+                                Iterator<String> keys = object.keys();
+                                while (keys.hasNext()) {
+                                    String key = keys.next();
+                                    if (key.equals("mesaj")) {
+                                        break;
+                                    } else {
+                                        Log.d("Fetchx", key + "===" + object.get(key));
+                                        prioritate = object.get("prioritate").toString();
                                     }
                                 }
-                                try {
-                                    assert object != null;
-                                    Iterator<String> keys = object.keys();
-                                    while (keys.hasNext()) {
-                                        String key = keys.next();
-                                        if (key.equals("mesaj")) {
-                                            break;
-                                        } else {
-                                            Log.d("Fetchx", key + "===" + object.get(key));
-                                            prioritate = object.get("prioritate").toString();
+                                batalion = object.get("batalion").toString();
+                                facultate = object.get("facultate").toString();
+                                nume = object.get("nume").toString();
+                                email = object.get("email").toString();
+                                prenume = object.get("prenume").toString();
 
-                                        }
-                                    }
-                                    batalion = object.get("batalion").toString();
-                                    facultate = object.get("facultate").toString();
-                                    nume = object.get("nume").toString();
-                                    email = object.get("email").toString();
-                                    prenume = object.get("prenume").toString();
+                                UserData.GetInstance().setNume(nume);
+                                UserData.GetInstance().setPrenume(prenume);
+                                UserData.GetInstance().setEmail(email);
+                                UserData.GetInstance().setBatalion(batalion);
+                                UserData.GetInstance().setFacultate(facultate);
 
-                                    UserData.GetInstance().setNume(nume);
-                                    UserData.GetInstance().setPrenume(prenume);
-                                    UserData.GetInstance().setEmail(email);
-                                    UserData.GetInstance().setBatalion(batalion);
-                                    UserData.GetInstance().setFacultate(facultate);
-
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-
-
-                                if (prioritate.equals("admin") ||prioritate.equals("client")) {
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                    intent.putExtra("prioritate", prioritate);
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            if (prioritate.equals("admin") || prioritate.equals("client")) {
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                intent.putExtra("prioritate", prioritate);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
-
                 });
             } else {
                 Toast.makeText(getApplicationContext(), "Toate campurile sunt obligatorii!", Toast.LENGTH_SHORT).show();
             }
         });
 
-
-    }
-
-    public static void setBatalion(String batalion) {
-        Autentificare.batalion = batalion;
     }
 }
