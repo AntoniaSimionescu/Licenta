@@ -136,20 +136,24 @@ public class Admin extends AppCompatActivity implements NavigationView.OnNavigat
                 Intent intent2 = new Intent(this, SetariAdmin.class);
                 startActivity(intent2);
                 break;
-            case R.id.contact:
-                Intent intent3 = new Intent(this, ContactAdmin.class);
+            case R.id.gestionare:
+                Intent intent3 = new Intent(this, GestionareClienti.class);
                 startActivity(intent3);
                 break;
+            case R.id.contact:
+                Intent intent4 = new Intent(this, ContactAdmin.class);
+                startActivity(intent4);
+                break;
             case R.id.share:
-                Intent intent4 = new Intent(Intent.ACTION_SEND);
-                intent4.setType("text/plain");
-                intent4.putExtra(Intent.EXTRA_TEXT, "Descarcă aplicația MTA NEWS!\nLink-ul aplicației aici..." );
-                startActivity(Intent.createChooser(intent4, "Distribuie folosind: "));
+                Intent intent5 = new Intent(Intent.ACTION_SEND);
+                intent5.setType("text/plain");
+                intent5.putExtra(Intent.EXTRA_TEXT, "Descarcă aplicația MTA NEWS!\nLink-ul aplicației aici..." );
+                startActivity(Intent.createChooser(intent5, "Distribuie folosind: "));
                 break;
             case R.id.deconectare:
                 UserData.DisconnectInstance();
-                Intent intent5 = new Intent(this, Autentificare.class);
-                startActivity(intent5);
+                Intent intent6 = new Intent(this, Autentificare.class);
+                startActivity(intent6);
                 break;
 
         }

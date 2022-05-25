@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
+            android:name=".admin.GestionareClienti"
+            android:exported="false" />
+        <activity
             android:name=".admin.SetariAdmin"
             android:exported="false" />
         <activity

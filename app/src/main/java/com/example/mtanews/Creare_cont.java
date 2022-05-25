@@ -16,10 +16,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mtanews.core.UserData;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
-import java.util.regex.Pattern;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Iterator;
 
 public class Creare_cont extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -28,9 +33,6 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
     TextView textViewAutentificare;
     ProgressBar progressBar;
     Spinner spinner, spinner1;
-    public static String batalion;
-    public static String facultate;
-
 
     String getBatalionLetter(String batalion){
         String toBeReturned="";
@@ -86,7 +88,7 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
         });
 
         buttonSignUp.setOnClickListener(v -> {
-            String nume, prenume, email, utilizator, parola;
+            String nume, prenume, email, utilizator, parola, batalion, facultate;
             nume = String.valueOf(textInputEditTextNume.getText());
             prenume = String.valueOf(textInputEditTextPrenume.getText());
             email = String.valueOf(textInputEditTextEmail.getText());
@@ -117,12 +119,12 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
                     data[5] = getBatalionLetter(batalion);
                     data[6] = getFacultateLetter(facultate);
 
-                    PutData putData = new PutData("http://10.10.19.129/LoginRegister/signup.php", "POST", field, data);
+                    PutData putData = new PutData("http://172.20.10.2/LoginRegister/signup.php", "POST", field, data);
                     if (putData.startPut()) {
                         if (putData.onComplete()) {
                             progressBar.setVisibility(View.GONE);
                             String result = putData.getResult();
-                            if (result.equals("Inscriere cu succes!")){
+                            if (result.equals("Asteptati aprobarea adminului!")){
                                 Toast.makeText(getApplicationContext(),result,Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), Autentificare.class);
                                 startActivity(intent);

@@ -25,6 +25,7 @@ public class UserData {
     private String batalion;
     private String facultate;
 
+
     public String getNume() {
         return nume;
     }

@@ -12,6 +12,7 @@
         <entry key="..\:/Users/simionescu.antonia/Desktop/MTANEWS/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/MTANEWS/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.165625" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/ic_email.xml" value="0.2703125" />
+        <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/ic_gestionare_client.xml" value="0.1105" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/ic_inainte.xml" value="0.1175" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/ic_inapoi.xml" value="0.1" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
@@ -20,6 +21,8 @@
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/ic_share.xml" value="0.2025" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/ic_user.xml" value="0.2703125" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/style_button.xml" value="0.1735" />
+        <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/style_button_accept.xml" value="0.1105" />
+        <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/style_button_refuzare.xml" value="0.1105" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/style_completare.xml" value="0.1735" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/style_searchbar.xml" value="0.1735" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/drawable/style_spinner.xml" value="0.1735" />
@@ -33,6 +36,7 @@
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/activity_contact.xml" value="0.1" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/activity_contact_admin.xml" value="0.14895833333333333" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/activity_creare_cont.xml" value="0.2" />
+        <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/activity_gestionare_clienti.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/activity_pdfactivity.xml" value="0.10588235294117647" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/activity_raport.xml" value="0.1" />
@@ -44,7 +48,7 @@
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/batalion_fragment.xml" value="0.20364583333333333" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/contact.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/drawer.xml" value="0.16822916666666668" />
-        <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/draweradmin.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/draweradmin.xml" value="0.2" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/dropdown.xml" value="0.2" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/fragment_as_atm.xml" value="0.20364583333333333" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/fragment_batalion1.xml" value="0.20364583333333333" />
@@ -62,6 +66,7 @@
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/fragment_sport.xml" value="0.20364583333333333" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/fragment_stire.xml" value="0.144" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/header.xml" value="0.13802083333333334" />
+        <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/layout_cereri_clienti.xml" value="0.3048780487804878" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/layout_item.xml" value="0.1546875" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/layout_items.xml" value="0.2" />
         <entry key="..\:/Users/simionescu.antonia/Desktop/Proiect licenta/MTANEWS/app/src/main/res/layout/main_menu.xml" value="0.25416666666666665" />

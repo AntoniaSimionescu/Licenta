@@ -54,4 +54,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="data">DATĂ</string>
     <string name="stire">ȘTIRE</string>
+    <string name="gestionare">Gestionare clienți</string>
+    <string name="nume_prenume">Nume Prenume</string>
 </resources>

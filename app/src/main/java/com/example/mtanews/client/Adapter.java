@@ -42,7 +42,9 @@ public class Adapter extends FirebaseRecyclerAdapter<ModelClass, Adapter.ViewHol
         viewHolder.autor.setText(modelClass.getAutor());
         viewHolder.stire.setText(modelClass.getStire());
         viewHolder.data.setText(modelClass.getData());
-        viewHolder.butonStire.setOnClickListener(v -> fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.client, new StireFragment(modelClass.getAutor(), modelClass.getDescriere(), modelClass.getTitlu(), modelClass.getStire(), modelClass.getData())).addToBackStack(null).commit());
+        viewHolder.butonStire.setOnClickListener(v -> fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.client,
+                new StireFragment(modelClass.getAutor(), modelClass.getDescriere(),
+                modelClass.getTitlu(), modelClass.getStire(), modelClass.getData())).addToBackStack(null).commit());
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

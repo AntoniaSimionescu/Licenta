@@ -10,6 +10,10 @@
             android:title="@string/setari"
             android:icon="@drawable/ic_setari">
         </item>
+        <item android:id="@+id/gestionare"
+            android:title="@string/gestionare"
+            android:icon="@drawable/ic_gestionare_client">
+        </item>
         <item android:id="@+id/contact"
             android:title="@string/contact"
             android:icon="@drawable/ic_contact">

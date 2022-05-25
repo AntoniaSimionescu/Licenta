@@ -17,6 +17,7 @@ import com.example.mtanews.core.UserData;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -64,62 +65,66 @@ public class Autentificare extends AppCompatActivity {
                     String[] data = new String[2];
                     data[0] = utilizator;
                     data[1] = parola;
-                    PutData putData = new PutData("http://10.10.19.129/LoginRegister/login.php", "POST", field, data);
+                    PutData putData = new PutData("http://172.20.10.2/LoginRegister/login.php", "POST", field, data);
                     if (putData.startPut()) {
                         if (putData.onComplete()) {
                             progressBar.setVisibility(View.GONE);
                             String result = putData.getResult();
-                            Log.d("result", result);
-                            JSONArray array = null;
-                            try {
-                                array = new JSONArray(result);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                            JSONObject object = null;
-
-                            for (int i = 0; i < (array != null ? array.length() : 0); i++) {
+                            Log.d("aaa", result);
+                            if (!result.equals("Cererea nu a fost inca aprobata sau a fost refuzata!") && !result.equals("Parola este gresita!Cererea nu a fost inca aprobata sau a fost refuzata!")) {
+                                JSONArray array = null;
                                 try {
-                                    object = array.getJSONObject(i);
+                                    array = new JSONArray(result);
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
-                            }
-                            try {
+                                JSONObject object = null;
 
-                                assert object != null;
-                                Iterator<String> keys = object.keys();
-                                while (keys.hasNext()) {
-                                    String key = keys.next();
-                                    if (key.equals("mesaj")) {
-                                        break;
-                                    } else {
-                                        Log.d("Fetchx", key + "===" + object.get(key));
-                                        prioritate = object.get("prioritate").toString();
+                                for (int i = 0; i < (array != null ? array.length() : 0); i++) {
+                                    try {
+                                        object = array.getJSONObject(i);
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
                                     }
                                 }
-                                batalion = object.get("batalion").toString();
-                                facultate = object.get("facultate").toString();
-                                nume = object.get("nume").toString();
-                                email = object.get("email").toString();
-                                prenume = object.get("prenume").toString();
+                                try {
+                                    assert object != null;
+                                    Iterator<String> keys = object.keys();
+                                    while (keys.hasNext()) {
+                                        String key = keys.next();
+                                        if (key.equals("mesaj")) {
+                                            break;
+                                        } else {
+                                            Log.d("Fetchx", key + "===" + object.get(key));
+                                            prioritate = object.get("prioritate").toString();
+                                        }
+                                    }
+                                    batalion = object.get("batalion").toString();
+                                    facultate = object.get("facultate").toString();
+                                    nume = object.get("nume").toString();
+                                    email = object.get("email").toString();
+                                    prenume = object.get("prenume").toString();
 
-                                UserData.GetInstance().setNume(nume);
-                                UserData.GetInstance().setPrenume(prenume);
-                                UserData.GetInstance().setEmail(email);
-                                UserData.GetInstance().setBatalion(batalion);
-                                UserData.GetInstance().setFacultate(facultate);
+                                    UserData.GetInstance().setNume(nume);
+                                    UserData.GetInstance().setPrenume(prenume);
+                                    UserData.GetInstance().setEmail(email);
+                                    UserData.GetInstance().setBatalion(batalion);
+                                    UserData.GetInstance().setFacultate(facultate);
 
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                            if (prioritate.equals("admin") || prioritate.equals("client")) {
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                intent.putExtra("prioritate", prioritate);
-                                startActivity(intent);
-                                finish();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                if (prioritate.equals("admin") || prioritate.equals("client")) {
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    intent.putExtra("prioritate", prioritate);
+                                    startActivity(intent);
+                                    finish();
+                                }
                             } else {
-                                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                if(result.equals("Parola este gresita!Cererea nu a fost inca aprobata sau a fost refuzata!"))
+                                Toast.makeText(getApplicationContext(), "Parola este gresita!", Toast.LENGTH_SHORT).show();
+                                else
+                                    Toast.makeText(getApplicationContext(), "Cererea nu a fost inca aprobata sau a fost refuzata!", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
