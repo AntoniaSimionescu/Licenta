@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mtanews.R;
+import com.example.mtanews.core.URLs;
 import com.vishnusivadas.advanced_httpurlconnection.FetchData;
 
 import org.json.JSONArray;
@@ -21,10 +22,12 @@ import java.util.ArrayList;
 public class GestionareClienti extends AppCompatActivity {
 
     ArrayList<UserRequests> userRequestsList ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestionare_clienti);
+
 
         Button inapoi = findViewById(R.id.btninapoi);
         inapoi.setOnClickListener(v -> {
@@ -43,7 +46,7 @@ public class GestionareClienti extends AppCompatActivity {
     }
 
     public void getUserRequests() {
-        FetchData ftData = new FetchData("http://172.20.10.2/LoginRegister/getRequests.php");
+        FetchData ftData = new FetchData(URLs.USERS_URL);
         JSONArray jsonUseri = null;
         JSONArray obiect = null;
         if (ftData.startFetch()) {

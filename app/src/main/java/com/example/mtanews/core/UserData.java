@@ -24,7 +24,15 @@ public class UserData {
     private String email;
     private String batalion;
     private String facultate;
+    private String utilizator;
 
+    public String getUtilizator() {
+        return utilizator;
+    }
+
+    public void setUtilizator(String utilizator) {
+        this.utilizator = utilizator;
+    }
 
     public String getNume() {
         return nume;

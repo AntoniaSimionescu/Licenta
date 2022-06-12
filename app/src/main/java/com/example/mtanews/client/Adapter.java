@@ -1,5 +1,6 @@
 package com.example.mtanews.client;
 
+import android.content.ClipData;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.mtanews.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+
+import java.util.List;
 
 
 public class Adapter extends FirebaseRecyclerAdapter<ModelClass, Adapter.ViewHolder> {

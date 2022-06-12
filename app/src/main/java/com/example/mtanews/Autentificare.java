@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mtanews.core.URLs;
 import com.example.mtanews.core.UserData;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
@@ -31,7 +32,7 @@ public class Autentificare extends AppCompatActivity {
     TextView textViewCrearecont;
     ProgressBar progressBar;
     public static String prioritate;
-    public static String batalion, facultate, nume, email, prenume;
+    public static String batalion, facultate, nume, email, prenume, user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +66,12 @@ public class Autentificare extends AppCompatActivity {
                     String[] data = new String[2];
                     data[0] = utilizator;
                     data[1] = parola;
-                    PutData putData = new PutData("http://172.20.10.2/LoginRegister/login.php", "POST", field, data);
+                    PutData putData = new PutData(URLs.LOGIN_URL, "POST", field, data);
                     if (putData.startPut()) {
                         if (putData.onComplete()) {
                             progressBar.setVisibility(View.GONE);
                             String result = putData.getResult();
-                            Log.d("aaa", result);
+
                             if (!result.equals("Cererea nu a fost inca aprobata sau a fost refuzata!") && !result.equals("Parola este gresita!Cererea nu a fost inca aprobata sau a fost refuzata!")) {
                                 JSONArray array = null;
                                 try {
@@ -104,12 +105,14 @@ public class Autentificare extends AppCompatActivity {
                                     nume = object.get("nume").toString();
                                     email = object.get("email").toString();
                                     prenume = object.get("prenume").toString();
+                                    user = object.get("utilizator").toString();
 
                                     UserData.GetInstance().setNume(nume);
                                     UserData.GetInstance().setPrenume(prenume);
                                     UserData.GetInstance().setEmail(email);
                                     UserData.GetInstance().setBatalion(batalion);
                                     UserData.GetInstance().setFacultate(facultate);
+                                    UserData.GetInstance().setUtilizator(user);
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();

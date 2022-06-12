@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mtanews.core.URLs;
 import com.example.mtanews.core.UserData;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
@@ -119,7 +120,7 @@ public class Creare_cont extends AppCompatActivity implements AdapterView.OnItem
                     data[5] = getBatalionLetter(batalion);
                     data[6] = getFacultateLetter(facultate);
 
-                    PutData putData = new PutData("http://172.20.10.2/LoginRegister/signup.php", "POST", field, data);
+                    PutData putData = new PutData(URLs.REGISTER_URL, "POST", field, data);
                     if (putData.startPut()) {
                         if (putData.onComplete()) {
                             progressBar.setVisibility(View.GONE);

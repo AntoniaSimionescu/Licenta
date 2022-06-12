@@ -44,13 +44,12 @@ public class PDFActivity extends AppCompatActivity {
         if (raport.equals("raport_restanta"))
             pdfView.fromAsset("Raport restanta.pdf").load();
         if (raport.equals("raport_contestatie"))
-            pdfView.fromAsset("Raport permisie.pdf").load();
+            pdfView.fromAsset("Raport contestatie.pdf").load();
         if (raport.equals("raport_transfer"))
-            pdfView.fromAsset("Raport permisie.pdf").load();
+            pdfView.fromAsset("Raport transfer.pdf").load();
         if (raport.equals("raport_emitere_documente"))
             pdfView.fromAsset("Raport emitere documente.pdf").load();
         if (raport.equals("raport_adeverinta_student"))
             pdfView.fromAsset("Raport adeverinta student.pdf").load();
-
     }
 }

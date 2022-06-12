@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.mtanews.Autentificare;
@@ -26,7 +25,6 @@ public class Client extends AppCompatActivity implements NavigationView.OnNaviga
 
     public static String facultate;
     TabLayout tabLayout;
-   // TabItem mbatalion, mfacultate, minteresgeneral, masatm, mcabinetmedical, msport;
     PagerAdapter pagerAdapter;
     Toolbar mtoolbar, toolbar;
     ViewPager2 viewPager2;
@@ -41,7 +39,7 @@ public class Client extends AppCompatActivity implements NavigationView.OnNaviga
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer);
 
-        Button contbutton = (Button) findViewById(R.id.contbtn);
+        Button contbutton = findViewById(R.id.contbtn);
 
 
         setSupportActionBar(mtoolbar);
@@ -69,6 +67,7 @@ public class Client extends AppCompatActivity implements NavigationView.OnNaviga
             startActivity(intent);
         });
     }
+
 
     @SuppressLint("NonConstantResourceId")
     @Override

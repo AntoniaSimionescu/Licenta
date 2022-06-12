@@ -1,11 +1,14 @@
 package com.example.mtanews.fragment;
 
+import android.app.SearchManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mtanews.R;
 import com.example.mtanews.client.Adapter;
+import com.example.mtanews.client.Client;
 import com.example.mtanews.client.ModelClass;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -56,8 +60,6 @@ public class Batalion1Fragment extends Fragment {
                 new FirebaseRecyclerOptions.Builder<ModelClass>()
                         .setQuery(order, ModelClass.class)
                         .build();
-
-
 
         adapter = new Adapter(options, this.fragmentActivity);
         recyclerViewbatalion1.setAdapter(adapter);
