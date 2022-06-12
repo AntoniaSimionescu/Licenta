@@ -39,16 +39,6 @@ class DataBase
     {
         $utilizator = $this->prepareData($utilizator);
         $parola = $this->prepareData($parola);
-        // $this->sql = "select * from " . $table . " where utilizator = '" . $utilizator . "'";
-        // $result = mysqli_query($this->connect, $this->sql);
-        // $row = mysqli_fetch_assoc($result);
-        // if (mysqli_num_rows($result) != 0) {
-        //     $dbutilizator = $row['utilizator'];
-        //     $dbparola = $row['parola'];
-        //     if ($dbutilizator != $utilizator && !password_verify($parola, $dbparola)) {
-        //         echo "Cererea nu a fost inca aprobata sau a fost refuzata!";
-        //     } 
-        // } 
         $this->sql = "select * from " . $table . " where utilizator = '" . $utilizator . "'";
         $result = mysqli_query($this->connect, $this->sql);
         $row = mysqli_fetch_assoc($result);
@@ -95,6 +85,42 @@ class DataBase
         return "Cerere acceptata cu succes!";
     }
 
+    function resetPassword($table, $utilizator, $parola, $parolaNoua, $parolaConfirm){
+        $utilizator = $this->prepareData($utilizator);
+        $parola = $this->prepareData($parola);
+        $parolaNoua = $this->prepareData($parolaNoua);
+        $parolaConfirm = $this->prepareData($parolaConfirm);
+        $this->sql = "select * from " . $table . " where utilizator = '" . $utilizator . "'";
+        $result = mysqli_query($this->connect, $this->sql);
+        $row = mysqli_fetch_assoc($result);
+        if (mysqli_num_rows($result) != 0) {
+            $dbutilizator = $row['utilizator'];
+            $dbparola = $row['parola'];
+            if ($dbutilizator == $utilizator && password_verify($parola, $dbparola)) {
+                if($parolaNoua == $parolaConfirm){
+                    if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,120}$/', $parolaNoua) && !preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,120}$/', $parolaConfirm)) {
+                        echo "Parola nu corespunde cerintelor!";
+                        return false;
+                    } else {
+                        $parolaNoua = password_hash($parolaNoua, PASSWORD_DEFAULT);
+                        $parolaConfirm = password_hash($parolaConfirm, PASSWORD_DEFAULT);
+                    }
+                    $this->sql = "UPDATE users SET parola = '".$parolaNoua."' where utilizator = '".$utilizator."'";
+                    $res = mysqli_query($this->connect, $this->sql);
+                    if($res){
+                        return true;
+                    }else {
+                        echo "Eroare la modificarea parolei!";
+                    }
+                } else {
+                    echo "Parola confirmata nu corespunde cu parola noua!";
+                }
+            } else {
+                echo "Parola veche nu corespunde!";
+            }
+        }
+    }
+
     function refuzRequest($nume,$prenume,$email,$batalion,$facultate)
     {
         $this->sql = "DELETE FROM requests WHERE  nume ='".$nume."' and prenume ='".$prenume."' and email ='".$email."' and batalion ='".$batalion."' and facultate ='".$facultate."'";
@@ -128,65 +154,25 @@ class DataBase
                 echo "Utilizator existent!";
             } 
         } 
-        $this->sql = "select * from " . $table . " where email = '" . $email . "'";
-        $result = mysqli_query($this->connect, $this->sql);
-        $row = mysqli_fetch_assoc($result);
-        if (mysqli_num_rows($result) != 0) {
-            $dbemail = $row['email'];
-            if ($dbemail == $email) {
-                echo "Adresa de email corespunde altui utilizator!";
+        if (substr($email,-7) != "@mta.ro")
+        {
+            echo "Adresa de email nu corespunde academiei!";
+        } else {
+            $this->sql = "select * from " . $table . " where email = '" . $email . "'";
+            $result = mysqli_query($this->connect, $this->sql);
+            $row = mysqli_fetch_assoc($result);
+            if (mysqli_num_rows($result) != 0) {
+                $dbemail = $row['email'];
+                if ($dbemail == $email) {
+                    echo "Adresa de email corespunde altui utilizator!";
+                } 
             } 
-        } 
-      
         $this->sql =
             "INSERT INTO $table (nume, prenume, utilizator, parola, email, batalion, facultate) VALUES ('$nume', '$prenume', '$utilizator', '$parola', '$email', '$batalion', '$facultate')";
         if (mysqli_query($this->connect, $this->sql)) {
-            // $row = mysqli_fetch_assoc(mysqli_query($this->connect, $this->sql));
-            // $dbnume = $row['nume'];
-            // $dbprenume = $row['prenume'];
-            // $dbemail = $row['email'];
-            // $dbutilizator = $row['utilizator'];
-            // $dbparola = $row['parola'];
-            // $dbbatalion = $row['batalion'];
-            // $dbfacultate = $row['facultate'];
-            // $arr[] = array('nume' => $dbnume, 'prenume' => $dbprenume, 'utilizator' => $dbutilizator, 'parola' => $dbparola, 'email' => $dbemail, 'batalion' => $dbbatalion, 'parola' => $dbparola);
-            // return json_encode($arr);
             return true;
         } else return false;
-        //$this->sql = "select * from " . $table . " where utilizator = '" . $utilizator . "'";
-        // $result = mysqli_query($this->connect, $this->sql);
-        // $row = mysqli_fetch_assoc($result);
-        
-        
-        // $this->sql = "select * from " . $table . " where utilizator = '" . $utilizator . "'";
-        // $result = mysqli_query($this->connect, $this->sql);
-        // $row = mysqli_fetch_assoc($result);
-        // $signup = array();
-        // if (mysqli_num_rows($resultat) != 0){
-        //     $dbnume = $row['nume'];
-        //     $dbprenume = $row['prenume'];
-        //     $dbemail = $row['email'];
-        //     $dbutilizator = $row['utilizator'];
-        //     $dbparola = $row['parola'];
-        //     $dbbatalion = $row['batalion'];
-        //     $dbfacultate = $row['facultate'];
-        //     if($dbnume == $nume && $dbprenume == $prenume && $dbutilizator == $utilizator && password_verify($parola, $dbparola) && $dbemail == $email && $dbbatalion == $batalion && $dbfacultate == $facultate){
-        //         $signup[] = $row; 
-        //         return json_encode($signup);
-        //     } else {
-        //         echo "";
-        //         return false;
-        //     }
-        // }
-
-        // }
-        
-        
-            // if(mysqli_query($this->connect, $this->sql)){
-        //     $signup[] = $row; 
-        //     return json_encode($signup);
-        //     //return true;
-        // } else return false;
+    }
     }
 
 }
