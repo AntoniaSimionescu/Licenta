@@ -1,5 +1,12 @@
 package com.example.mtanews.client;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import com.example.mtanews.AESCryptoManager;
+import com.example.mtanews.admin.RedactareStire;
+
 import java.util.Map;
 
 public class ModelClass {
@@ -9,6 +16,8 @@ public class ModelClass {
     private String titlu;
     private String stire;
     private String data;
+
+    String secret = RedactareStire.secret;
 
 
     public static ModelClass getInstance() {
@@ -53,24 +62,30 @@ public class ModelClass {
         this.stire = stire;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public String getAutor() {
-        return autor;
+
+        return AESCryptoManager.decrypt(autor, secret);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public String getDescriere() {
-        return descriere;
+        return AESCryptoManager.decrypt(descriere, secret);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public String getTitlu() {
-        return titlu;
+        return AESCryptoManager.decrypt(titlu, secret);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public String getStire() {
-        return stire;
+        return AESCryptoManager.decrypt(stire, secret);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public String getData() {
-        return data;
+        return AESCryptoManager.decrypt(data, secret);
     }
 
 }

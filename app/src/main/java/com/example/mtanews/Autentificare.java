@@ -71,6 +71,7 @@ public class Autentificare extends AppCompatActivity {
                         if (putData.onComplete()) {
                             progressBar.setVisibility(View.GONE);
                             String result = putData.getResult();
+                            Log.d("asta", result);
 
                             if (!result.equals("Cererea nu a fost inca aprobata sau a fost refuzata!") && !result.equals("Parola este gresita!Cererea nu a fost inca aprobata sau a fost refuzata!")) {
                                 JSONArray array = null;
@@ -89,7 +90,7 @@ public class Autentificare extends AppCompatActivity {
                                     }
                                 }
                                 try {
-                                    assert object != null;
+                                     assert object != null;
                                     Iterator<String> keys = object.keys();
                                     while (keys.hasNext()) {
                                         String key = keys.next();
