@@ -64,7 +64,6 @@ public class ModelClass {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public String getAutor() {
-
         return AESCryptoManager.decrypt(autor, secret);
     }
 

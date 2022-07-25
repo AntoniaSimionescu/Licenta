@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent i = new Intent(MainActivity.this, Admin.class);
                 startActivity(i);
-
                 finish();
             }, 3000);
         } else {
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent i = new Intent(MainActivity.this, Client.class);
                 startActivity(i);
-
                 finish();
             }, 3000);
         }

@@ -1,7 +1,7 @@
 package com.example.mtanews.core;
 
 public class URLs {
-    public static final String ROOT_URL = "http://192.168.14.160/LoginRegister/";
+    public static final String ROOT_URL = "http://172.16.35.69/LoginRegister/";
     public static final String LOGIN_URL = ROOT_URL + "login.php";
     public static final String REGISTER_URL = ROOT_URL + "signup.php";
     public static final String USERS_URL = ROOT_URL + "getRequests.php";

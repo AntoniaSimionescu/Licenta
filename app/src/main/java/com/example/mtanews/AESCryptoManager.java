@@ -33,7 +33,6 @@ public class AESCryptoManager {
             e.printStackTrace();
         }
     }
-
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static String encrypt(String strToEncrypt, String secret)
     {
@@ -47,7 +46,6 @@ public class AESCryptoManager {
         catch (Exception ignored) {}
         return null;
     }
-
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static String decrypt(String strToDecrypt, String secret)
     {

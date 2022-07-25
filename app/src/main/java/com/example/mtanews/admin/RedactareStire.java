@@ -109,7 +109,6 @@ public class RedactareStire extends AppCompatActivity {
             final String categorieTxt = categorie.getText().toString();
             final String stireTxt = stire.getText().toString();
 
-
             @SuppressLint("SimpleDateFormat") DateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyyy");
             String dataTxt = dateFormat.format(Calendar.getInstance().getTime());
             int ts = (int) new Date().getTime();

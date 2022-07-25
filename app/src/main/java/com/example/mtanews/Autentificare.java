@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -17,7 +16,6 @@ import com.example.mtanews.core.URLs;
 import com.example.mtanews.core.UserData;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
-
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -71,8 +69,6 @@ public class Autentificare extends AppCompatActivity {
                         if (putData.onComplete()) {
                             progressBar.setVisibility(View.GONE);
                             String result = putData.getResult();
-                            Log.d("asta", result);
-
                             if (!result.equals("Cererea nu a fost inca aprobata sau a fost refuzata!") && !result.equals("Parola este gresita!Cererea nu a fost inca aprobata sau a fost refuzata!")) {
                                 JSONArray array = null;
                                 try {
@@ -97,7 +93,6 @@ public class Autentificare extends AppCompatActivity {
                                         if (key.equals("mesaj")) {
                                             break;
                                         } else {
-                                            Log.d("Fetchx", key + "===" + object.get(key));
                                             prioritate = object.get("prioritate").toString();
                                         }
                                     }
